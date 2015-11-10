@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Chat</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="css/chat.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <script type="text/javascript" src="Script/chat.js" ></script>
+</head>
+<body onload="init();">
+<noscript>
+    Your browser does not support JavaScript!!
+</noscript>
+<br/>
+<div class="row">
+<div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <h1 class="text-center">CHAT APP</h1>
+<table id="content" align="center" class="table table-bordered col-lg-12">
+    <tr>
+        <td class="col-lg-4">
+            <div id="scroll" class="">
+            </div>
+        </td>
+    </tr>
+</table>
+    </div>
+<div class="col-lg-4"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div align="center" class="col-lg-6 center-block">
+    <div class="row">
+        <div class="col-lg-2"><input type="text" id="userName" class="col-lg-2 form-control" placeholder="Username" maxlength="10" size="10" onblur="checkUsername();"></div>
+   <div class="col-lg-4"> <input type="text" id="messageBox" class="text-center form-control" placeholder="Message" maxlength="2000" size="50" onkeydown="handleKey(event)"></div>
+    <input type="button" value="Send" class="col-md-3 btn btn-info" onclick="sendMessage();">
+    <input type="button" value="Delete All" class="col-md-3 btn btn-danger" onclick="deleteMessages();">
+    </div>
+</div>
+<div class="col-lg-3"></div>
+    </div>
+</body>
+</html>
